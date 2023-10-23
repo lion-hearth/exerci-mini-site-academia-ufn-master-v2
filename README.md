@@ -1,5 +1,5 @@
 # Exercio-Mini-Site-Academia-Ufn
-site simples criado com html, neste site usei apenas html para seguir a metodlogia da aula , a ideia é que ele seria um site de animes.
+site simples criado com  algumas tecnologias como html e css a ideia é que ele seria um site de animes.
 
 ![image](https://github.com/lion-hearth/exerci-mini-site-academia-ufn-master-v2/assets/78951995/5f0738a6-a9cd-46b6-a36a-34bbc220c168)
 
