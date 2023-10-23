@@ -1,0 +1,296 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
+
+*,::after,::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+  font-family: Montserrat, sans-serif;
+  color: white;
+}
+
+header {
+  background-color: rgba(51, 0, 0, 0.37);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1; /* Garante que a header fique na frente de outros elementos */
+    backdrop-filter: blur(5px); /* Adiciona o efeito de desfoque ao fundo */
+    -webkit-backdrop-filter: blur(5px); /* Para compatibilidade com navegadores baseados no motor WebKit, como Safari */
+}
+
+header svg{
+  fill: white;
+  max-height: 2rem;
+  aspect-ratio:1;
+  display: block;
+}
+
+header.active{
+  position: sticky;
+  top: var(--_top);
+  background-color: #100;
+  
+  box-shadow: 0 3px 6px #0005;
+}
+
+header svg:hover, ul li:hover{
+  fill: yellow;
+  color: yellow;
+  cursor:pointer;
+}
+
+ul{
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+section{
+  background-color: #300;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+
+}
+
+section:nth-child(odd){
+  background-color: #511;
+}
+
+#house img {
+    width: 100%; /* Defina a largura desejada, pode ser em pixels (px) ou porcentagem (%) */
+    height: auto; /* Para manter a proporção original da imagem */
+}
+
+#background-video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+section {
+  background-color: #300;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+section:nth-child(odd) {
+  background-color: #511;
+}
+
+
+.responsive-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.slide {
+  width: 896px;
+  position: relative;
+  overflow: hidden;
+  margin: 0 15px
+}
+
+.slide img {
+  max-width: 100%;
+  position: relative;
+  transition: all 1s ease-out;
+}
+
+.slide.slick-center img {
+  transition: all 1s ease-out;
+  opacity: 1;
+}
+
+.slick-prev,
+.slick-next {
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 50%;
+  margin: auto;
+  position: absolute;
+  z-index: 3000;
+  top: 0;
+  bottom: 0;
+  cursor: pointer;
+  outline: none;
+}
+
+.slick-next {
+  right: calc(50% - 545px);
+  text-indent: 1px
+}
+
+.slick-prev {
+  left: calc(50% - 545px);
+  text-indent: -2px
+}
+
+.slick-arrow {
+  background: none;
+  border: none;
+  position: absolute;
+  bottom: 33px;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 0;
+  width: 33px;
+  height: 33px;
+  line-height: 34px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 20;
+  -webkit-transition: background-color .2s ease 0s;
+  transition: background-color .2s ease 0s
+}
+
+.slick-arrow:hover {
+  background-color: rgba(255, 255, 255, .2)
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: 0;
+  right: calc(50% - 432px);
+  padding: 0;
+  margin: 0;
+  list-style: none
+}
+
+.slick-dots li {
+  float: left;
+  display: block;
+  margin: 1rem .2rem;
+  font-size: 0
+}
+
+.slick-dots button {
+  border: 0;
+  overflow: hidden;
+  background: rgba(255, 255, 255, .4);
+  width: .8rem;
+  height: .8rem;
+  border-radius: 50%;
+  text-indent: 9999px;
+  padding: 0
+}
+
+.slider .slick-dots .slick-active button {
+  background: rgba(255, 255, 255, .8)
+}
+
+.text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 0 33px 99px;
+  color: #fff;
+  z-index: 5;
+  -webkit-transition: all .2s ease 0s;
+  transition: all .2s ease 0s;
+  -webkit-transform: translateY(0);
+  transform: translateY(0)
+}
+
+.prev .text {
+    text-align: right;
+    float: right;
+    
+}
+
+.slick-active .text {
+  padding: 0 55px 99px
+}
+
+.category {
+  text-transform: uppercase;
+  color: #DE751F;
+}
+
+.title {
+  font-size: 1.1rem;
+  line-height: 1.15em;
+  margin: .4rem 0 0;
+  -webkit-transition: all .6s ease 0s;
+  transition: all .6s ease 0s;
+  color: #fff;
+}
+
+.slider.changing .text {
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%)
+}
+
+.slick-active .title {
+  margin-top: .8rem;
+  font-size: 3.1rem;
+  -webkit-transition: all .4s ease .2s;
+  transition: all .4s ease .2s
+}
+
+.summary {
+  position: relative;
+  height: 1px;
+  top: 100px;
+  font-weight: 400;
+  margin: 0;
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+  -webkit-transition: all .4s ease 0s;
+  transition: all .4s ease 0s
+}
+
+.slick-active .summary {
+  top: 5px;
+  -webkit-transition: all .4s ease .2s;
+  transition: all .4s ease .2s
+}
+
+.slide:before {
+  content: "";
+  display: block;
+}
+
+.slide figure:before,
+.slide figure:after {
+  content: "";
+  position: absolute;
+  top: 10%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .25);
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .7) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, .7)));
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .7) 100%);
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .7) 100%);
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .7) 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .7) 100%)
+}
+
+.slide figure:before {
+  top: 0;
+  background: transparent;
+  z-index: 1;
+  -webkit-transition: background-color .4s ease 0s;
+  transition: background-color .4s ease 0s
+}
+
+.slide:hover figure:before,
+.slide:focus figure:before {
+  background: rgba(39, 37, 30, .6)
+}
+
